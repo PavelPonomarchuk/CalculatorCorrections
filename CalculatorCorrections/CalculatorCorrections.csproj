@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Expression.cs" />
+    <Compile Include="Model\IExpressionNode.cs" />
+    <Compile Include="Model\Number.cs" />
     <Compile Include="Model\Operation.cs" />
     <Compile Include="Model\OperationsRepository.cs" />
     <Compile Include="Model\OperationType.cs" />
