@@ -210,8 +210,7 @@ namespace CalculatorTests.Model
                 return;
             }
 
-            var result = division.Action.Invoke(1.0, 0);
-            Assert.That(double.IsInfinity(result), Is.True);
+            Assert.Throws<DivideByZeroException>(() => division.Action.Invoke(1.0, 0));
         }
 
         private static bool CheckOperationResult(Func<double, double, double> action, double x, double y, double result)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CalculatorCorrections.Model
 {
@@ -37,7 +38,7 @@ namespace CalculatorCorrections.Model
 
         private void CreateDivisionOperation()
         {
-            double funcDivide(double x, double y) => x / y;
+            double funcDivide(double x, double y) => y == 0 ? throw new DivideByZeroException() : x / y;
             var division = new Operation(OperationType.Division, "/", funcDivide, 2);
             operations.Add(division);
         }
